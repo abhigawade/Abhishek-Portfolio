@@ -45,7 +45,7 @@ const Header = () => {
             transition={{ delay: 0.2, duration: 0.4 }}
           >
             <h2 className="text-2xl font-light mb-4">
-              <span className="font-normal">Python Django</span> Developer
+              <span className="font-normal">Python</span> Developer
             </h2>
             <div className="h-1 w-24 bg-gradient-to-r from-purple-400 to-transparent mx-auto" />
           </motion.div>

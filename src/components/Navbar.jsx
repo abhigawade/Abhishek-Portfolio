@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { Home, Menu, X } from "lucide-react"
 import { useTheme } from "./theme-provider"
 import ThemeToggle from "./ThemeToggle"
 
@@ -63,7 +63,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="text-xl font-bold text-white">
-            AG
+            <Home size={24} className="inline-block mr-2" />
           </a>
 
           {/* Desktop Navigation */}
