@@ -29,25 +29,25 @@ const Education = () => {
   ]
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" id="education">
+    <section className="py-10 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" id="education">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-white">Education</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">Education</h2>
         <div className="max-w-3xl mx-auto">
           {education.map((edu, index) => (
             <motion.div
               key={index}
               ref={ref}
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="mb-8 bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              className="mb-5 bg-white dark:bg-gray-700 rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow"
             >
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-purple-100 dark:bg-purple-900 rounded-full">
-                  <GraduationCap className="text-purple-600 dark:text-purple-300" size={24} />
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-full">
+                  <GraduationCap className="text-purple-600 dark:text-purple-300" size={20} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800 dark:text-white">{edu.degree}</h3>
+                  <h3 className="text-lg font-bold text-gray-800 dark:text-white">{edu.degree}</h3>
                   <p className="text-purple-600 dark:text-purple-300">{edu.institution}</p>
                   <p className="text-gray-500 dark:text-gray-400">{edu.period}</p>
                   {edu.grade && <p className="text-green-600 dark:text-green-400 font-semibold mt-1">{edu.grade}</p>}

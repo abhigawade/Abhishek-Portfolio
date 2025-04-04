@@ -27,9 +27,17 @@ export function ThemeProvider({ children, defaultTheme = "light" }: ThemeProvide
   const [theme, setTheme] = useState<Theme>(defaultTheme)
 
   useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") as Theme | null
+    if (savedTheme) {
+      setTheme(savedTheme)
+    }
+  }, [])
+
+  useEffect(() => {
     const root = window.document.documentElement
     root.classList.remove("light", "dark")
     root.classList.add(theme)
+    localStorage.setItem("theme", theme)
   }, [theme])
 
   const toggleTheme = () => {

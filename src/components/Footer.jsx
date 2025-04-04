@@ -6,33 +6,33 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-4">Abhishek Gawade</h3>
-            <p className="text-gray-400 mb-4 max-w-md">
+            <h3 className="text-xl font-bold mb-3">Abhishek Gawade</h3>
+            <p className="text-gray-400 mb-3 max-w-md text-sm">
               Python Django Developer passionate about building robust web applications and RESTful APIs.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3">
               <a
                 href="mailto:abhishekgawade102@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
-                <Mail size={20} />
+                <Mail size={18} />
               </a>
               <a
                 href="tel:+918652315283"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Phone"
               >
-                <Phone size={20} />
+                <Phone size={18} />
               </a>
               <a
                 href="https://www.linkedin.com/in/abhishek-gawade-361289238"
@@ -41,7 +41,7 @@ const Footer = () => {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={20} />
+                <Linkedin size={18} />
               </a>
               <a
                 href="https://github.com"
@@ -50,21 +50,21 @@ const Footer = () => {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="GitHub"
               >
-                <Github size={20} />
+                <Github size={18} />
               </a>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-8"
+            className="grid grid-cols-2 gap-6"
           >
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-purple-400">Quick Links</h4>
-              <ul className="space-y-2">
+              <h4 className="text-base font-semibold mb-2 text-purple-400">Quick Links</h4>
+              <ul className="space-y-1 text-sm">
                 <li>
                   <a href="#about" className="text-gray-400 hover:text-white transition-colors">
                     About
@@ -88,8 +88,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-purple-400">More</h4>
-              <ul className="space-y-2">
+              <h4 className="text-base font-semibold mb-2 text-purple-400">More</h4>
+              <ul className="space-y-1 text-sm">
                 <li>
                   <a href="#education" className="text-gray-400 hover:text-white transition-colors">
                     Education
@@ -106,7 +106,7 @@ const Footer = () => {
                     className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1"
                   >
                     <span>Resume</span>
-                    <ExternalLink size={14} />
+                    <ExternalLink size={12} />
                   </a>
                 </li>
               </ul>
@@ -114,10 +114,10 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        <div className="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <div className="pt-4 border-t border-gray-800 text-center text-gray-500 text-xs">
           <p className="flex items-center justify-center gap-1">
             <span>© {currentYear} Abhishek Gawade. Made with</span>
-            <Heart size={14} className="text-red-500" />
+            <Heart size={12} className="text-red-500" />
           </p>
         </div>
       </div>

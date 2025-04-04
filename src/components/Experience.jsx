@@ -33,22 +33,22 @@ const Experience = () => {
   ]
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300" id="experience">
+    <section className="py-10 bg-white dark:bg-gray-900 transition-colors duration-300" id="experience">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-white">Professional Experience</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">Professional Experience</h2>
         <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
               ref={ref}
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="mb-12 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="mb-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-5 hover:shadow-xl transition-shadow"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-purple-100 dark:bg-purple-900 rounded-full">
-                  <Briefcase className="text-purple-600 dark:text-purple-300" size={24} />
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-2.5 bg-purple-100 dark:bg-purple-900 rounded-full">
+                  <Briefcase className="text-purple-600 dark:text-purple-300" size={20} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white">{exp.title}</h3>
@@ -56,7 +56,7 @@ const Experience = () => {
                   <p className="text-gray-500 dark:text-gray-400">{exp.period}</p>
                 </div>
               </div>
-              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1.5 ml-3">
                 {exp.responsibilities.map((resp, idx) => (
                   <li key={idx}>{resp}</li>
                 ))}

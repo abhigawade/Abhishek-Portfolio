@@ -9,16 +9,16 @@ const About = () => {
   })
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" id="about">
+    <section className="py-10 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" id="about">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">Profile</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">Profile</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             Junior Python Developer with expertise in Python, Django, Django Rest Framework, and SQL, and a foundational
             understanding of JavaScript and React.js. Skilled in developing, testing, and maintaining APIs, building
