@@ -1,12 +1,18 @@
 "use client"
+import { useState } from "react"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Phone, ExternalLink, Heart } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, Heart, FileText, Download } from "lucide-react"
+import ResumeModal from "./ResumeModal"
 
 const Footer = () => {
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false)
   const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-gray-900 text-white py-8">
+      {/* Resume Modal */}
+      <ResumeModal isOpen={isResumeModalOpen} onClose={() => setIsResumeModalOpen(false)} />
+
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           <motion.div
@@ -17,7 +23,7 @@ const Footer = () => {
           >
             <h3 className="text-xl font-bold mb-3">Abhishek Gawade</h3>
             <p className="text-gray-400 mb-3 max-w-md text-sm">
-              Python Django Developer passionate about building robust web applications and RESTful APIs.
+              Python Developer passionate about building robust web applications and RESTful APIs.
             </p>
             <div className="flex space-x-3">
               <a
@@ -44,7 +50,7 @@ const Footer = () => {
                 <Linkedin size={18} />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/abhigawade"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -101,12 +107,22 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <button
+                    onClick={() => setIsResumeModalOpen(true)}
+                    className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1 bg-transparent border-none p-0 cursor-pointer"
+                  >
+                    <span>View Resume</span>
+                    <FileText size={12} />
+                  </button>
+                </li>
+                <li>
                   <a
-                    href="#"
+                    href="/resume.pdf"
+                    download="Abhishek_Gawade_Resume.pdf"
                     className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1"
                   >
-                    <span>Resume</span>
-                    <ExternalLink size={12} />
+                    <span>Download Resume</span>
+                    <Download size={12} />
                   </a>
                 </li>
               </ul>

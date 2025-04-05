@@ -23,12 +23,12 @@ const Skills = () => {
     {
       icon: <Layout size={20} />,
       title: "Frontend",
-      skills: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "React.js"],
+      skills: ["HTML", "CSS", "Tailwind CSS", "Bootstrap", "JavaScript", "React.js"],
     },
     {
       icon: <Database size={20} />,
       title: "Database",
-      skills: ["SQL", "MongoDB", "Firebase", "PostgreSQL"],
+      skills: ["PostgreSQL", "MongoDB", "Firebase"],
     },
   ]
 

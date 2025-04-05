@@ -1,8 +1,12 @@
 "use client"
+import { useState } from "react"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Phone } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, FileText, Download } from "lucide-react"
+import ResumeModal from "./ResumeModal"
 
 const Header = () => {
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false)
+
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -11,6 +15,9 @@ const Header = () => {
       className="relative overflow-hidden bg-purple-900 dark:bg-gray-900 text-white pt-20 pb-12"
       id="home"
     >
+      {/* Resume Modal */}
+      <ResumeModal isOpen={isResumeModalOpen} onClose={() => setIsResumeModalOpen(false)} />
+
       {/* Animated background shapes */}
       <motion.div
         className="absolute inset-0 opacity-10"
@@ -52,7 +59,7 @@ const Header = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-wrap justify-center gap-3 items-center"
+          className="flex flex-wrap justify-center gap-3 items-center mb-6"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.4 }}
@@ -81,13 +88,37 @@ const Header = () => {
             <span className="text-sm">LinkedIn</span>
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/abhigawade"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-200 hover:scale-105"
           >
             <Github size={16} />
             <span className="text-sm">GitHub</span>
+          </a>
+        </motion.div>
+
+        {/* Resume Buttons */}
+        <motion.div
+          className="flex justify-center gap-4 mt-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.4 }}
+        >
+          <button
+            onClick={() => setIsResumeModalOpen(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-white text-purple-900 rounded-md font-medium hover:bg-purple-100 transition-colors duration-200"
+          >
+            <FileText size={18} />
+            View Resume
+          </button>
+          <a
+            href="/Abhishek-Gawade-Resume1.pdf"
+            download="Abhishek_Gawade_Resume.pdf"
+            className="flex items-center gap-2 px-4 py-2 bg-purple-700 text-white rounded-md font-medium hover:bg-purple-600 transition-colors duration-200"
+          >
+            <Download size={18} />
+            Download Resume
           </a>
         </motion.div>
       </div>
