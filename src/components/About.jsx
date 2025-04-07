@@ -20,7 +20,7 @@ const About = () => {
         >
           <h2 className="text-3xl font-bold mb-4 text-center text-gray-800 dark:text-white">About Me</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            Junior Python Developer with expertise in Python, Django, Django Rest Framework,Flask, FastAPI, and SQL, and a foundational
+            Junior Python Developer with expertise in Python, Django, Django Rest Framework, Flask, FastAPI and SQL and a foundational
             understanding of JavaScript and React.js. Skilled in developing, testing, and maintaining APIs, building
             robust backend systems, and creating scalable, secure web applications. Passionate about continuous learning
             and delivering reliable software solutions.
